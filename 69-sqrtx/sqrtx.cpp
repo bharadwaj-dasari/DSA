@@ -3,20 +3,18 @@ public:
     int mySqrt(int x) {
         if( x == 0)return 0;
         if( x == 1)return 1;
-        int l = 1,r = x;
-        int ans = 0;
-        
+        int l = 1,r = x;   
         while(l<=r){
             int m = l+(r-l)/2;
-            if((long long)m*m == x){
+            long long s = (long long)m*m ;
+            if(s== x){
                 return m;
-            }else if((long long)m*m < x){
-                ans = m;
-                l = m+1;
-            }else{
+            }else if(s > x){
                 r = m-1;
+            }else{
+                l = m+1;
             }
         }
-        return ans;
+        return r;
     }
 };
