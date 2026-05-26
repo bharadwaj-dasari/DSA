@@ -1,0 +1,13 @@
+class Solution {
+public:
+    bool checkIfPangram(string sentence) {
+        vector<int> freq(26,0);
+        for(char c:sentence){
+            freq[c-'a']++;
+        }
+        for(int n:freq){
+            if(n == 0)return false;
+        }
+        return true;
+    }
+};
