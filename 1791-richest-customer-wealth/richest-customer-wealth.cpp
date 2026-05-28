@@ -1,14 +1,14 @@
 class Solution {
 public:
     int maximumWealth(vector<vector<int>>& accounts) {
-        int result = 0;
-        for(const auto& row : accounts){
-            int cache = 0;
-            for(const auto& elements : row){
-                cache += elements;
+        int res = 0;
+        for(auto &row:accounts){
+            int c = 0;
+            for(auto &m:row){
+                c += m;
             }
-            if(cache > result)result = cache;
+            if(c>res)res = c;
         }
-        return result;
+        return res;
     }
 };
