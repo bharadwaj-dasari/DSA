@@ -16,7 +16,7 @@ public:
             {4,"IV"},
             {1,"I"}
         };
-        string s = "";
+        string s;
         for(auto &[val,sym]:roman){
             while(num>=val){
                 s += sym;
