@@ -1,6 +1,7 @@
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
+        if (s == "") return 0;
         unordered_set<char> charSet;
         int left = 0;
         int maxLength = 0;
